@@ -277,15 +277,12 @@ export default {
     },
     // set sub options default
     setSubOptions(option){ 
-
-          this.selected_sub_options[option.id] = {
-            option: {},
-            value: {},
-            other: {
-              status: false,
-              text: null
-            }
-          }
+        var element = {
+                  option: {},
+                  value: {},
+                  other: { status: false, text: null }
+              }
+        this.$set( this.selected_sub_options, option.id, element)
     },
     // set sub options selceted
     setSelectedSubOptions(option, value){
